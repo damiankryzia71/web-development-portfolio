@@ -1,0 +1,170 @@
+body {
+    margin: 0px;
+}
+
+.title-page {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(25, 29, 136, 0.5), rgba(20, 80, 163, 0.5)),
+        url("./images/background.avif");
+}
+
+.title-name {
+    font-family: 'Handlee', cursive;
+    font-size: 70px;
+    font-weight: bolder;
+    color: white;
+}
+
+.title-subtitle {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.about-me-page {
+    background: linear-gradient(to right, #89b8f0 0%, #1c589e 100%);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.about-me-title {
+    font-family: 'Titillium Web', sans-serif;
+    color: #191D88;
+    margin-bottom: 50px;
+}
+
+.damian-kryzia-picture {
+    height: 200px;
+    border-radius: 50%;
+}
+
+.about-me-description {
+    text-align: center;
+    width: 20em;
+    color: #191D88;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 21px;
+}
+
+.horizontal-divider {
+    background: linear-gradient(to right, #89b8f0 0%, #1c589e 100%);
+    padding: 50px 0px;
+}
+
+hr {
+    border: dotted #191D88 5px;
+    border-bottom: none;
+    width: 10%;
+    margin: 0px auto;
+}
+
+.skills-page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #89b8f0 0%, #1c589e 100%);
+}
+
+.skills-title {
+    color: #191D88;
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 50px;
+}
+
+.skills-page-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-card {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill-card-image {
+    height: 117.25px;
+}
+
+.skill-card-title {
+    color: #191D88;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.skill-card-description {
+    margin: 5px;
+    color: #191D88;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;       
+}
+
+.portfolio-button-container {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #ffd700 0%, #e3c62d 100%);
+    margin-top: 20px;
+    height: 40px;
+    font-family: 'Titillium Web', sans-serif;
+    padding: 0px 10px;
+    margin-top: auto;
+}
+
+.portfolio-button-container > .link {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+@media (max-width: 1300px) {
+    .skill-card {
+        margin-top: 100px;
+    }
+}
+
+footer {
+    padding-top: 100px;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #89b8f0 0%, #1c589e 100%);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template: 10px 10px / auto auto auto;
+    gap: 20px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item.link {
+    text-decoration: none;
+    color: #191D88;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+.copyright {
+    grid-column: span 3;
+    color: #191D88;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 17px;
+}
