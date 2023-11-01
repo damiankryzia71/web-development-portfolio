@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather App</title>
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,600;1,6..12,400&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <!--Header bar including a unit switch button and a location search bar-->
+        <header>
+            <!--Search bar with clear button-->
+            <form action="/request" method="POST" class="search-bar-container">
+                <input type="text" class="search-bar" placeholder="Request Location" name="location">
+                <input type="submit" class="search-button" value="GO">
+            </form>
+        </header>
+        <!--Main section of the website, includes information about current weather-->
+        <main>
+            <!--Main grid to create a layout for main website elements-->
+            <div class="main-grid">
+                <!--Container for an animated image, current location name, date, and temparature-->
+                <div class="current-main-container">
+                    <img src=<%= today.imagePath %> alt="test-image">
+                    <h1><%= today.location %></h1>
+                    <h2><%= today.temp_C + " C°" %> / <%= today.temp_F + " F°" %></h2>
+                    <h2><%= today.date %></h2>
+                </div>
+                <!--Container for cards that include details about current weather-->
+                <div class="current-card-container">
+                    <!--Model for a current weather info card-->
+                    <div class="current-card">
+                        <!--Title: e.g. Wind, Rain etc.-->
+                        <div class="current-card-header">
+                            <h4 style="margin: 0px">Hourly</h4>
+                            <button class="current-card-collapse"
+                                id="card1-collapse">
+                                <div>
+                                </div>
+                            </button>
+                        </div>
+                        <hr class="current-card-hide-details" id="card1-hr">
+                        <!--Details-->
+                        <div class="current-card-body current-card-hide-details"
+                            id="card1-body">
+                            <div class="hourly-forecast-container">
+                                <% for (let i = 0; i < 6; i++) { %>
+                                    <div class="hour">
+                                        <p><%= hourly[i].hour %>:00</p>
+                                        <img src=<%= hourly[i].imagePath %> alt="hourly-weather-img">
+                                        <p><%= hourly[i].temp_C %> C°</p>
+                                        <p><%= hourly[i].temp_F %> F°</p>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Model for a current weather info card-->
+                    <div class="current-card">
+                        <!--Title: e.g. Wind, Rain etc.-->
+                        <div class="current-card-header">
+                            <h4 style="margin: 0px">Precipitation</h4>
+                            <button class="current-card-collapse"
+                                id="card2-collapse">
+                                <div>
+                                </div>
+                            </button>
+                        </div>
+                        <hr class="current-card-hide-details" id="card2-hr">
+                        <!--Details-->
+                        <div class="current-card-body current-card-hide-details"
+                            id="card2-body">
+                            <div class="hourly-forecast-container">
+                                <% for (let i = 0; i < 6; i++) { %>
+                                    <div class="hour">
+                                        <p><%= hourly[i].hour %>:00</p>
+                                        <img src="images/rain.png" alt="hourly-rain-img">
+                                        <p><%= hourly[i].precipitation %> in</p>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Model for a current weather info card-->
+                    <div class="current-card">
+                        <!--Title: e.g. Wind, Rain etc.-->
+                        <div class="current-card-header">
+                            <h4 style="margin: 0px">Wind</h4>
+                            <button class="current-card-collapse"
+                                id="card3-collapse">
+                                <div>
+                                </div>
+                            </button>
+                        </div>
+                        <hr class="current-card-hide-details" id="card3-hr">
+                        <!--Details-->
+                        <div class="current-card-body current-card-hide-details"
+                            id="card3-body">
+                            <div class="hourly-forecast-container">
+                                <% for (let i = 0; i < 6; i++) { %>
+                                    <div class="hour">
+                                        <p><%= hourly[i].hour %>:00</p>
+                                        <img src="images/wind.png" alt="hourly-wind-img">
+                                        <p><%= hourly[i].wind %> MPH</p>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Container for weekly forecast-->
+                <div class="weekly-main-container">
+                    <!--Title: Weekly Forecast-->
+                    <h2 class="weekly-header">Weekly Forecast</h2>
+                    <!--Container for weekly cards-->
+                    <div class="weekly-card-container">
+                        <!--Model for a weekly forecast day card-->
+                        <% for (let i = 0; i < 6; i++) { %>
+                        <div class="weekly-card">
+                            <img src=<%= weekly[i].imagePath %> alt="moon-img">
+                            <div><%= weekly[i].day %></div>
+                            <div class="weekly-temp"><%= weekly[i].temp_C + " C°"%> / <%= weekly[i].temp_F + " F°" %></div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>Copyright © 2023</footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="javascript/app.js"></script>
+    </body>
+</html>

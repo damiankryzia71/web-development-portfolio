@@ -1,0 +1,82 @@
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+}
+
+body {
+    background: linear-gradient(-225deg, #5D9FFF 0%, #9accff 48%, #6BBBFF 100%);
+}
+
+header {
+    border-radius: 20px;
+    background-color: rgb(85, 88, 218);
+}
+
+.search-button, .current-card-collapse {
+    background-color: rgb(134, 135, 230);
+    border: none;
+    color: white;
+    transition: all 0.3s ease 0s;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+.search-button:hover, .current-card-collapse:hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px gray;
+    transform: translateY(-2px);
+}
+
+.search-bar {
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    padding: 0px 10px;
+    color: gray;
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+.current-card-container, .weekly-main-container {
+    background-color: #5D9FFF;
+    border-radius: 20px;
+    box-shadow: 7px 7px 10px 1px rgb(85, 85, 85);
+}
+
+.current-card, .weekly-card {
+    background: linear-gradient(-225deg, #95c0ff 0%, #7cc4ff 100%);
+    border-radius: 20px;
+}
+
+.current-card-collapse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    transition: all 0.3s ease 0s;
+}
+
+.current-card-collapse > div {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    clip-path: polygon(21% 8%, 51% 55%, 82% 8%, 92% 15%, 51% 82%, 10% 15%);
+    transition: all 0.3s ease 0s;
+}
+
+.current-card-collapse:hover > div {
+    transform: rotate(-90deg);
+    background-color: black;
+}
+
+hr {
+    border: 1px solid rgb(134, 135, 230);
+}
+
+
+
+

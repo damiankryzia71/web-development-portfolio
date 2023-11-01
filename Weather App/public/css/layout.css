@@ -1,0 +1,177 @@
+header {
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    min-height: 40px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.search-button {
+    min-height: 40px;
+    min-width: 70px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: minmax(350px, 600px) minmax(350px, 600px);
+    grid-template-rows: auto 200px;
+    margin-top: 50px;
+    gap: 40px;
+    align-items: center;
+}
+
+.current-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.current-main-container img {
+    height: 300px;
+}
+
+.current-main-container > h1, h2 {
+    margin: 10px;
+}
+
+.current-card-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.current-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 7px 15px;
+}
+
+hr {
+    margin: 0px;
+}
+
+.current-card-body {
+    padding: 5px;
+    margin: 10px;
+}
+
+.current-card-hide-details {
+    display: none;
+}
+
+.hourly-forecast-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hour {
+    text-align: center;
+}
+
+.hour img {
+    height: 25px;
+}
+
+.hour p {
+    font-size: 12px;
+    margin: 1px;
+}
+
+.weekly-main-container {
+    grid-column: span 2;
+    padding: 10px;
+}
+
+.weekly-header {
+    margin: 0px;
+    padding: 0px 20px;
+}
+
+.weekly-card-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 50px;
+}
+
+.weekly-card {
+    height: 8em;
+    flex-basis: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.weekly-card img {
+    height: 3em;
+}
+
+.weekly-temp {
+    font-size: smaller;
+}
+
+footer {
+    text-align: center;
+    margin: 50px 0px;
+}
+
+@media (max-width: 576px) {
+    .main-grid {
+        grid-template-columns: 400px;
+        grid-template-rows: 2fr auto 2fr;
+    }
+    .weekly-main-container {
+        grid-column: auto;
+    }
+    .weekly-header {
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+    .weekly-card-container {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: 550px;
+        grid-template-rows: 3fr auto 2fr;
+    }
+    .weekly-main-container {
+        grid-column: auto;
+    }
+    .weekly-header {
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+    .weekly-card-container {
+        flex-wrap: wrap;
+    }
+}
