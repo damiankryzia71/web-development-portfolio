@@ -1,4 +1,3 @@
-/**
  * Weather App by Damian Kryzia
  * Simple weather Web Application
  * Includes weather information and hourly forecast for the current day, simple forecast for the following 6 days
@@ -11,4 +10,3 @@
  * 
  * Copyright note: This application is not for commercial use. It is only a project serving as personal practice.
  * All weather images used are made by Neven: https://dribbble.com/shots/2721869-Weather-icons-source-file
- */
